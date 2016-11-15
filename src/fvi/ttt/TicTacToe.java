@@ -86,14 +86,14 @@ public class TicTacToe extends Application {
                    setPlayer(currentPlayer);
 
                     if (hasWon(currentPlayer)){
-                        statusMsg.setText(currentPlayer+" вийграв!");
+                        statusMsg.setText(currentPlayer+" - вийграв!");
                         currentPlayer=' ';
                     } else if(isBoardFull()){
                         statusMsg.setText("Draw!");
                         currentPlayer=' ';
                     } else {
                         currentPlayer=(currentPlayer=='X')?'O':'X';
-                        statusMsg.setText(currentPlayer+"повині грати ");
+                        statusMsg.setText(currentPlayer+" повинен грати ");
                     }
                 }
             }
@@ -114,7 +114,9 @@ public class TicTacToe extends Application {
                     line2.endXProperty().bind(this.heightProperty().subtract(10));
 
                     getChildren().addAll(line1,line2);
+
                 } else if (player=='O'){
+
                     Ellipse ellipse=new Ellipse(this.getWidth()/2,this.getHeight()/2,this.getWidth()/2-10,this.getHeight()/2-10);
                     ellipse.centerXProperty().bind(this.widthProperty().divide(2));
                     ellipse.centerYProperty().bind(this.heightProperty().divide(2));
