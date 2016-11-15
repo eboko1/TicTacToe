@@ -114,6 +114,7 @@ public class TicTacToe extends Application {
                     line2.endXProperty().bind(this.heightProperty().subtract(10));
                     line2.setStroke(Color.RED);
 
+
                     getChildren().addAll(line1,line2);
 
                 } else if (player=='O'){
