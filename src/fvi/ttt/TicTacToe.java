@@ -108,6 +108,7 @@ public class TicTacToe extends Application {
                     Line line1 = new Line(10,this.getHeight(),this.getWidth()-10,10);
                     line1.endXProperty().bind(this.widthProperty().subtract(10));
                     line1.endXProperty().bind(this.heightProperty().subtract(10));
+                    line1.setStroke(Color.RED);
 
                     Line line2 = new Line(10,10,this.getWidth()-10,this.getHeight());
                     line2.endXProperty().bind(this.widthProperty().subtract(10));
