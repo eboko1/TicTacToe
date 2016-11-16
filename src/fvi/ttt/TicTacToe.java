@@ -8,6 +8,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.StrokeLineCap;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
@@ -105,16 +106,19 @@ public class TicTacToe extends Application {
                 player=c;
 
                 if (player=='X'){
-                    Line line1 = new Line(10,this.getHeight(),this.getWidth()-10,10);
-                    line1.endXProperty().bind(this.widthProperty().subtract(10));
-                    line1.endXProperty().bind(this.heightProperty().subtract(10));
-                    line1.setStroke(Color.RED);
+                    Line line1 = new Line(10,this.getHeight()-10,this.getWidth(),10);
+                       line1.endXProperty().bind(this.widthProperty().subtract(10));
+                       line1.endXProperty().bind(this.heightProperty().subtract(10));
+                       line1.setStrokeWidth(10);
+                       line1.setStrokeLineCap(StrokeLineCap.ROUND);
+                       line1.setStroke(Color.RED);
 
-                    Line line2 = new Line(10,10,this.getWidth()-10,this.getHeight());
-                    line2.endXProperty().bind(this.widthProperty().subtract(10));
-                    line2.endXProperty().bind(this.heightProperty().subtract(10));
-                    line2.setStroke(Color.RED);
-
+                    Line line2 = new Line(10,10,this.getWidth(),this.getHeight()-10);
+                      line2.endXProperty().bind(this.widthProperty().subtract(10));
+                      line2.endXProperty().bind(this.heightProperty().subtract(10));
+                      line2.setStrokeWidth(10);
+                      line2.setStrokeLineCap(StrokeLineCap.ROUND);
+                      line2.setStroke(Color.RED);
 
                     getChildren().addAll(line1,line2);
 
