@@ -110,14 +110,14 @@ public class TicTacToe extends Application {
                        line1.endXProperty().bind(this.widthProperty().subtract(10));
                        line1.endXProperty().bind(this.heightProperty().subtract(10));
                        line1.setStrokeLineCap(StrokeLineCap.ROUND);
-                       line1.setStrokeWidth(10);
+                       line1.setStrokeWidth(15);
                        line1.setStroke(Color.RED);
 
                     Line line2 = new Line(10,10,this.getWidth(),this.getHeight()-8);
                       line2.endXProperty().bind(this.widthProperty().subtract(10));
                       line2.endXProperty().bind(this.heightProperty().subtract(10));
                       line2.setStrokeLineCap(StrokeLineCap.ROUND);
-                      line2.setStrokeWidth(10);
+                      line2.setStrokeWidth(15);
                       line2.setStroke(Color.RED);
 
                     getChildren().addAll(line1,line2);
