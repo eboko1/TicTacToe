@@ -111,14 +111,14 @@ public class TicTacToe extends Application {
                        line1.endXProperty().bind(this.heightProperty().subtract(10));
                        line1.setStrokeLineCap(StrokeLineCap.ROUND);
                        line1.setStrokeWidth(15);
-                       line1.setStroke(Color.RED);
+                       line1.setStroke(Color.BROWN);
 
                     Line line2 = new Line(10,10,this.getWidth(),this.getHeight()-8);
                       line2.endXProperty().bind(this.widthProperty().subtract(10));
                       line2.endXProperty().bind(this.heightProperty().subtract(10));
                       line2.setStrokeLineCap(StrokeLineCap.ROUND);
                       line2.setStrokeWidth(15);
-                      line2.setStroke(Color.RED);
+                      line2.setStroke(Color.BROWN);
 
                     getChildren().addAll(line1,line2);
 
@@ -137,8 +137,8 @@ public class TicTacToe extends Application {
                     Circle circle=new Circle();
                     circle.setCenterX(this.getWidth()/2);
                     circle.setCenterY(this.getHeight()/2);
-                    circle.setRadius(this.getHeight()/2-10);
-                    circle.setStroke(Color.BLACK);
+                    circle.setRadius(this.getHeight()/2-2);
+                    circle.setStroke(Color.VIOLET);
                     circle.setFill(Color.BLUE);
 
                     getChildren().add(circle);
