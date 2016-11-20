@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.StrokeLineCap;
@@ -123,7 +124,7 @@ public class TicTacToe extends Application {
 
                 } else if (player=='O'){
 
-                    Ellipse ellipse=new Ellipse(this.getWidth()/2,this.getHeight()/2,this.getWidth()/2-10,this.getHeight()/2-10);
+                 /*   Ellipse ellipse=new Ellipse(this.getWidth()/2,this.getHeight()/2,this.getWidth()/2-10,this.getHeight()/2-10);
                     ellipse.centerXProperty().bind(this.widthProperty().divide(2));
                     ellipse.centerYProperty().bind(this.heightProperty().divide(2));
                     ellipse.radiusXProperty().bind(this.widthProperty().divide(2).subtract(10));
@@ -132,6 +133,15 @@ public class TicTacToe extends Application {
                     ellipse.setFill(Color.BLUE);
 
                     getChildren().add(ellipse);
+                    */
+                    Circle circle=new Circle();
+                    circle.setCenterX(this.getWidth()/2);
+                    circle.setCenterY(this.getHeight()/2);
+                    circle.setRadius(this.getHeight()/2-10);
+                    circle.setStroke(Color.BLACK);
+                    circle.setFill(Color.BLUE);
+
+                    getChildren().add(circle);
 
                 }
             }
