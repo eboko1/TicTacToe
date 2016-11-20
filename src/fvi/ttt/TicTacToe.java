@@ -2,7 +2,6 @@ package fvi.ttt;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
