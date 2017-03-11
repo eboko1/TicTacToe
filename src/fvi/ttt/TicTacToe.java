@@ -103,22 +103,23 @@ public class TicTacToe extends Application {
                 return player;
             }
             public void setPlayer(char c){
-                player=c;
+                player = c;
 
-                if (player=='X'){
-                    Line line1 = new Line(10,this.getHeight()-8,this.getWidth(),10);
-                       line1.endXProperty().bind(this.widthProperty().subtract(10));
-                       line1.endXProperty().bind(this.heightProperty().subtract(10));
+                if (player == 'X'){
+                    Line line1 = new Line(40,this.getHeight()-10,this.getWidth(),20);
+                       line1.endXProperty().bind(this.widthProperty().subtract(-10));
+                       line1.endXProperty().bind(this.heightProperty().subtract(-10));
                        line1.setStrokeLineCap(StrokeLineCap.ROUND);
                        line1.setStrokeWidth(15);
                        line1.setStroke(Color.BROWN);
 
-                    Line line2 = new Line(10,10,this.getWidth(),this.getHeight()-8);
-                      line2.endXProperty().bind(this.widthProperty().subtract(10));
-                      line2.endXProperty().bind(this.heightProperty().subtract(10));
+                    Line line2 = new Line(40,20,this.getWidth(),this.getHeight()-10);
+                      line2.endXProperty().bind(this.widthProperty().subtract(-10));
+                      line2.endXProperty().bind(this.heightProperty().subtract(-10));
                       line2.setStrokeLineCap(StrokeLineCap.ROUND);
                       line2.setStrokeWidth(15);
                       line2.setStroke(Color.BROWN);
+
 
                     getChildren().addAll(line1,line2);
 
@@ -139,7 +140,7 @@ public class TicTacToe extends Application {
                     circle.setCenterY(this.getHeight()/2);
                     circle.setRadius(this.getHeight()/2-2);
                     circle.setStroke(Color.VIOLET);
-                    circle.setFill(Color.BLUE);
+                    circle.setFill(Color.PINK);
 
                     getChildren().add(circle);
 
